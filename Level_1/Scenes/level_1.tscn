@@ -1,4 +1,4 @@
-[gd_scene load_steps=29 format=3 uid="uid://dii17ipnggygn"]
+[gd_scene load_steps=30 format=3 uid="uid://dii17ipnggygn"]
 
 [ext_resource type="Script" path="res://Level_1/Scripts/level_1.gd" id="1_06jvn"]
 [ext_resource type="PackedScene" uid="uid://y25gs356b8wv" path="res://Platforms/Scenes/plattform.tscn" id="1_lvgl6"]
@@ -15,6 +15,7 @@
 [ext_resource type="PackedScene" uid="uid://ctkxdqyee4whk" path="res://Rope/Scenes/rope.tscn" id="13_p6nu2"]
 [ext_resource type="PackedScene" uid="uid://d4kcmed35wrwj" path="res://NPC/Scenes/NPC.tscn" id="14_4x87s"]
 [ext_resource type="Script" path="res://Level_1/Scripts/path_follow_2d.gd" id="15_4kr3k"]
+[ext_resource type="Texture2D" uid="uid://cfhsdubem5otw" path="res://Level_1/Scenes/EscenaBosque.jpg" id="16_gjxcv"]
 
 [sub_resource type="Gradient" id="Gradient_igvrk"]
 offsets = PackedFloat32Array(0.65493, 1)
@@ -259,3 +260,12 @@ script = ExtResource("15_4kr3k")
 
 [node name="Node2D" parent="Path2D/PathFollow2D" instance=ExtResource("14_4x87s")]
 position = Vector2(-24.7956, -56.6584)
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
+position = Vector2(1520, 720)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("16_gjxcv")
