@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=3 uid="uid://d4kcmed35wrwj"]
+
+[ext_resource type="Texture2D" uid="uid://c75g856us454n" path="res://NPC/Sprites/player_idle.png" id="1_ttpkp"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_plij1"]
+radius = 29.0
+height = 82.0
+
+[node name="NPC" type="Node2D"]
+
+[node name="NPC" type="CharacterBody2D" parent="."]
+position = Vector2(-23.7602, 21.4586)
+rotation = -0.0153369
+
+[node name="Sprite2D" type="Sprite2D" parent="NPC"]
+texture = ExtResource("1_ttpkp")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="NPC"]
+position = Vector2(1, 13)
+shape = SubResource("CapsuleShape2D_plij1")
