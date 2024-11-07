@@ -315,6 +315,7 @@ hframes = 13
 vframes = 12
 
 [node name="Camera2D" type="Camera2D" parent="."]
+enabled = false
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {

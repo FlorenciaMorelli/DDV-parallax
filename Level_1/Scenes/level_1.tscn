@@ -145,7 +145,25 @@ position = Vector2(643, 610)
 position = Vector2(1166, 348)
 
 [node name="Player" parent="." instance=ExtResource("2_ljmkg")]
-position = Vector2(2123, 1080)
+position = Vector2(2225, 948)
+metadata/_edit_group_ = true
+
+[node name="Camera2D2" type="Camera2D" parent="Player"]
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="Player/Camera2D2"]
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="Player/Camera2D2/ParallaxBackground"]
+motion_scale = Vector2(1.5, 1.5)
+motion_mirroring = Vector2(12000, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="Player/Camera2D2/ParallaxBackground/ParallaxLayer"]
+position = Vector2(0, 1350)
+texture = ExtResource("16_gjxcv")
+
+[node name="Sprite2D2" type="Sprite2D" parent="Player/Camera2D2/ParallaxBackground/ParallaxLayer"]
+position = Vector2(6000, 1350)
+texture = ExtResource("16_gjxcv")
+flip_h = true
 
 [node name="Obstacle" parent="." instance=ExtResource("3_a1lvn")]
 position = Vector2(181, 254)
@@ -191,7 +209,7 @@ position = Vector2(1604, 846)
 rotation = 0.520108
 
 [node name="Plattform4" parent="." instance=ExtResource("7_e4ilr")]
-position = Vector2(2525, 1174)
+position = Vector2(2530, 1203)
 
 [node name="Box" parent="." instance=ExtResource("8_dbwa1")]
 visible = false
@@ -261,11 +279,4 @@ script = ExtResource("15_4kr3k")
 [node name="Node2D" parent="Path2D/PathFollow2D" instance=ExtResource("14_4x87s")]
 position = Vector2(-24.7956, -56.6584)
 
-[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
-
-[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
-
-[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
-position = Vector2(1520, 720)
-scale = Vector2(0.8, 0.8)
-texture = ExtResource("16_gjxcv")
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
